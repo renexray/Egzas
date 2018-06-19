@@ -52,7 +52,7 @@ public class DbAdapter {
     }
     //check entry already in database or not
     public boolean isExist(String num){
-        String query = "SELECT numeris FROM klientai WHERE numeris='"+num+"' LIMIT 1";
+        String query = "SELECT numeris FROM klientai WHERE numeris='"+num+"' LIMIT ";
         Cursor row = sqlDb.rawQuery(query, null);
         return row.moveToFirst();
     }
