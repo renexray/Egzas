@@ -20,7 +20,7 @@ public class DbAdapter {
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE IF NOT EXISTS "+dbTable+" (_id INTEGER PRIMARY KEY autoincrement,vardas, numeris INTEGER, data INTEGER, tipas, UNIQUE(numeris))");
+            db.execSQL("CREATE TABLE IF NOT EXISTS "+dbTable+" (_id INTEGER PRIMARY KEY autoincrement,vardas, numeris INTEGER, data INTEGER, tipas)");
         }
 
         @Override
@@ -47,7 +47,7 @@ public class DbAdapter {
     //insert data
     public void insert(String text2,String text3,String text4,String text5) {
         if(!isExist(text3)) {
-            sqlDb.execSQL("INSERT INTO klientai (vardas,data,numeris,tipas) VALUES('" + text2 + "','" + text3 + "','" + text4 + "','" + text5 + "')");
+            sqlDb.execSQL("INSERT INTO klientai (vardas,numeris,data,tipas) VALUES('" + text2 + "','" + text3 + "','" + text4 + "','" + text5 + "')");
         }
     }
     //check entry already in database or not
