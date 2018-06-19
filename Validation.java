@@ -7,7 +7,7 @@ public class Validation {
 
     private static final String VALID_CREDENTIALS_REGEX ="^[A-Za-z]{1,50}";
     private static final String VALID_NUMERIS_REGEX = "^[0-9]{1,9}$";
-    private static final String VALID_DATA_REGEX = "^((19|200|201[0-9])[0-9]{2})$";
+    private static final String VALID_DATA_REGEX = "^((19|20)\\d\\d)$";
 
 
     public static boolean isValidCredentials(String credentials){
